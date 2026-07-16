@@ -1,0 +1,17 @@
+body {
+    background-image: url('images/table.png');
+    background-size: cover;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Trebuchet MS', Courier, monospace, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}

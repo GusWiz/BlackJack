@@ -16,11 +16,9 @@ function startGame() {
 }
 
 function renderGame() {
-    if (newGame) {
-        cardsEl.textContent = "Cards: " + cards[0] + ", " + cards[1] 
-        newGame = false
-    }
-    sumEl.textContent = "Sum: " + sum
+    cardsEl.textContent = "Cards: " + cards 
+
+    sumEl.textContent = "Sum: " + cards
     if (sum < 21) {
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
@@ -36,8 +34,7 @@ function renderGame() {
 
 function newCard() {
     console.log("Drawing a new card from the deck!")
-    let newCard = 3
-    cardsEl.textContent += ", " + newCard
+    cards.push(3)
     renderGame()
 }
 

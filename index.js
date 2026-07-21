@@ -1,5 +1,5 @@
-let firstCard = 6
-let secondCard = 5
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -35,10 +35,14 @@ function renderGame() {
     messageEl.textContent = message
 }
 
-function newCard() {
+function drawNewCard() {
     console.log("Drawing a new card from the deck!")
-    cards.push(3)
-    sum+= 3
+    let newCard = getRandomCard()
+    cards.push(newCard)
+    sum += newCard
     renderGame()
 }
 
+function getRandomCard() {
+    return Math.floor(Math.random() * 13) + 1;
+}

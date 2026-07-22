@@ -38,7 +38,6 @@ function renderGame() {
 }
 
 function drawNewCard() {
-    checkCards()
     if (isAlive && !hasBlackJack) { 
         console.log("Drawing a new card from the deck!")
         let newCard = getRandomCard()
@@ -58,16 +57,4 @@ function getRandomCard() {
     } else {
         return randomCard
     }
-}
-
-function checkCards() {
-    
-    if (sum > 21) {
-        isAlive = false
-    }
-
-    if (sum === 21) {
-        hasBlackJack = true
-    }
-
 }
